@@ -1,0 +1,8 @@
+1. 信號: 處理非同步事件，發生某些錯誤條件而產生的事件，可利用signal() signaction()來設定某信號的處理方法。
+2. 具名管線技術: 普通管線(Pipe),具名管線(FIFO)。先進先出且半雙工，若是需要全雙工時須建立兩個管線。
+3. 信號量: 是一種進程同步機制，透過P，V操作。主要有以下幾個操作函數。
+	3.1 key_t ftok(char *pathname, char proj); //根據pathname, proj建立一個關鍵字
+	3.2 int semget(key_t key, int nsems,int semflg);//建立或取得一個信號量，names:建立的信號量個數。semflg:設定信號量的存取權限
+	3.3 int semop(int semid,struct sembuf *spos, int nspos);//用來改變信號量的鍵值，semid: 信號量的標誌。spos:指向結構體表明要進行的操作。nspos:spos陣列的個數
+	3.4 int semctl(int semid, int semnum, int cmd, union semun arg);
+4. 訊息佇列

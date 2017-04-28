@@ -1,0 +1,12 @@
+TCP/IP網路通訊協定
+Socket程式設計
+TCP程式設計
+UDP程式設計
+
+Socket常見結構: addr_in, sockaddr_in, sockaddr
+	addr_in: 儲存主機IP位址
+	sockaddr_in: 用來表示Internet協定位址結構
+	sockaddr:儲存主機IP位址與介面資訊
+Socket常見函數: socket(), bind(), listen(),accept(),connect(),send(),recv().snedto(),recvfrom()
+	socket(int af,int type,int protocol):建立一個通訊端
+	bind(SOCKET s,const struct sockaddr FAR *):將位址資訊與建立成功的通訊端聯繫在一起。

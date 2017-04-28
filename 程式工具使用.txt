@@ -1,0 +1,4 @@
+編輯器: KDe,Eclipse for CDT,gedit,Emacs(文字編輯並提供編譯及除錯介面),VIM,Vi
+編譯器: GCC(GNU Compiler Collection)
+除錯器: GDB，支援程式碼除錯，可單步執行。可設定中斷點及設定條件運算是來中斷。能夠檢視變數、記憶體等資源。支援動態改變程式的執行環境。
+makefile: make腳本，GCC是用編譯單個檔案。大量檔案需要編譯時須使用Make工具
