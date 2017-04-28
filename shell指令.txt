@@ -1,33 +1,38 @@
 ﻿cat:查看/預覽/建立檔案。 "cat > file" 建立檔案"file"
-echo:輸出變數值
-vi:修改檔案
-export:將變數轉為環境變數
+col:將[tab]鍵取代成空白鍵
+cut:分隔並取出字串
 declare/typeset:宣告變數type
+echo:輸出變數值{
+	-n:不換行
+	-e:處理特殊符號，\n,\t,\\,...}
+export:將變數轉為環境變數
+head:查看檔案的前n行
+ipmitool:IPMI tool,用來遠端監控操作Device
+last:查詢登入紀錄
 read:由鍵盤輸入val給變數
-bash的環境設定檔有紀錄參數
-有登入時會進入login shell,沒有登入或使用bash進入子程序時則為non-login shell
-stty:Linux熱鍵設定檔
 set:查看所有環境變數
+sort:排序顯示資料
+split:分割檔案 (可使用>>合併被分割的檔案)
+stty:Linux熱鍵設定檔
+su:切換使用者
+sudo:以他人的權限進行操作
+tee: each >,將stdin顯示到螢幕上同時寫入文件
+	-a:append
+tr:替換或刪除字串中的特定文字
+vi:修改檔案
+-:當作stdin / stdout
 -/+x:設定指令的參數x/取消指令的參數	x
 ~/:~表示user folder的捷徑(/home/user)
 >:將輸出的資料直接轉存到檔案中
 >>:與'>'類似，新寫入的資料不會覆蓋資料而是append
 <:將鍵盤輸入的資料改由檔案內容來輸入(類似read?)
 <<:可指定輸入的結束字元
-su:切換使用者
-sudo:以他人的權限進行操作
 ;:可將多行指令另用';'分隔來寫在同一行
 &&:條件判斷，cmd1 && cmd2當cmd1 OK就會執行cmd2
 ||:條件判斷，cmd1 || cmd2當cmd1 NG就會執行cmd2
 |:pipe,|後一定要接管線命令才會繼續動作
-cut:分隔並取出字串
-last:查詢登入紀錄
-sort:排序顯示資料
-tr:替換或刪除字串中的特定文字
-col:將[tab]鍵取代成空白鍵
-split:分割檔案 (可使用>>合併被分割的檔案)
--:當作stdin / stdout
-head:查看檔案的前n行
+":『var="lang is $LANG"』則『echo $var』可得『lang is zh_TW.UTF-8』
+':『var='lang is $LANG'』則『echo $var』可得『lang is $LANG』
 ===特殊符號===
 符號	內容
 #	註解符號：這個最常被使用在 script 當中，視為說明！在後的資料均不執行
